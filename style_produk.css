@@ -1,0 +1,314 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.clock-container {
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px 20px;
+  display: inline-block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.produk-list {
+  display: grid;
+  gap: 25px;
+}
+
+.produk-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.produk-header {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.profile-pic {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  border: 2px solid #eee;
+}
+
+.profile-pic.default {
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-weight: bold;
+}
+
+.user-info {
+  flex-grow: 1;
+}
+
+.username {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.post-time {
+  font-size: 0.8em;
+  color: #7f8c8d;
+}
+
+.produk-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.produk-content {
+  padding: 15px;
+}
+
+.produk-title {
+  font-size: 1.3em;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.produk-desc {
+  margin-bottom: 15px;
+  color: #34495e;
+}
+
+.produk-price {
+  font-weight: bold;
+  color: #e74c3c;
+  font-size: 1.2em;
+}
+
+.produk-actions {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 15px 15px 15px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: #3498db;
+  font-size: 1em;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.action-btn:hover {
+  color: #2980b9;
+}
+
+.add-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #2ecc71;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s;
+  z-index: 100;
+}
+
+.add-btn:hover {
+  background-color: #27ae60;
+  transform: scale(1.1);
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  font-size: 1.5em;
+  color: #2c3e50;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #7f8c8d;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.form-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-height: 100px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.submit-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  width: 100%;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #27ae60;
+}
+
+@media (max-width: 600px) {
+  .produk-image {
+    height: 250px;
+  }
+
+  .add-btn {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+  }
+}
+/* Komentar Wrapper */
+.komentar-list {
+  margin-top: 10px;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+
+/* Item Komentar */
+.komentar-item {
+  margin-bottom: 8px;
+  background: #f9f9f9;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Form Komentar */
+.form-komentar {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-komentar textarea {
+  resize: vertical;
+  min-height: 60px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+/* Tombol Submit */
+.form-komentar button {
+  align-self: flex-end;
+  background-color: #28a745; /* hijau */
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-komentar button:hover {
+  background-color: #218838;
+}

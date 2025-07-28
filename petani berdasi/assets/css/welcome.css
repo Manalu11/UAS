@@ -1,0 +1,136 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("../images/agriculture-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.welcome-container {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 90%;
+  margin: 2rem;
+}
+
+.logo img {
+  max-width: 150px;
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  color: #2e7d32;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+p {
+  color: #555;
+  margin-bottom: 2rem;
+  font-size: 1rem;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn i {
+  margin-right: 8px;
+}
+
+.btn-login {
+  background-color: #2e7d32;
+  color: white;
+  border: 2px solid #2e7d32;
+}
+
+.btn-login:hover {
+  background-color: #1b5e20;
+  border-color: #1b5e20;
+}
+
+.btn-register {
+  background-color: white;
+  color: #2e7d32;
+  border: 2px solid #2e7d32;
+}
+
+.btn-register:hover {
+  background-color: #f1f8e9;
+}
+
+.guest-option {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #eee;
+}
+
+.guest-option p {
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.btn-guest {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 2px solid #ddd;
+}
+
+.btn-guest:hover {
+  background-color: #e0e0e0;
+}
+
+@media (max-width: 480px) {
+  .welcome-container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+.logo img {
+  max-width: 150px;
+  margin-bottom: 1.5rem;
+  border-radius: 50%; /* Ini yang membuat gambar bulat */
+  object-fit: cover; /* Memastikan gambar terisi dengan proporsi yang benar */
+  width: 150px; /* Ukuran tetap untuk lebar */
+  height: 150px; /* Ukuran tetap untuk tinggi */
+  border: 3px solid #2e7d32; /* Garis tepi hijau */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sedikit bayangan */
+  padding: 5px; /* Ruang antara gambar dan border */
+  background-color: white; /* Latar belakang putih */
+}
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
